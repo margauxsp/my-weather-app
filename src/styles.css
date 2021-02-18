@@ -1,0 +1,92 @@
+body {
+  font-family: "Roboto", sans-serif;
+  color: #393e46;
+}
+
+form {
+  display: block;
+  margin: 0 0 10px;
+  text-align: center;
+}
+
+input {
+  padding: 5px 15px;
+  border: 1px #ebedee;
+  cursor: pointer;
+  border-radius: 5px;
+  text-align: center;
+}
+
+h1 {
+  font-weight: 900;
+  font-size: 50px;
+  margin: 0;
+}
+
+h2 {
+  font-weight: lighter;
+  font-size: 30px;
+  margin: 0 0 20px;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 0 auto;
+  display: block;
+  padding: 0 auto;
+  list-style: none;
+}
+
+footer {
+  font-size: 10px;
+  text-align: right;
+  padding: 0px;
+  margin: 0 auto;
+}
+
+.container {
+  border: 1px solid #ebedee;
+  border-radius: 15px;
+  box-shadow: 5px 5px 10px grey;
+  padding: 30px;
+  width: 500px;
+  display: block;
+  margin: 0px auto;
+}
+
+.current-weather {
+  position: relative;
+  right: -40px;
+}
+
+.current-weather-icon {
+  font-size: 150px;
+}
+
+.current-temperature {
+  font-size: 70px;
+}
+
+.temperature-format {
+  position: relative;
+  top: -35px;
+}
+
+.forcast {
+  display: block;
+  margin: 0 auto;
+  padding: 0;
+  font-size: 20px;
+  text-align: center;
+  width: 420px;
+}
+
+.fas {
+  color: #bbbfca;
+}
