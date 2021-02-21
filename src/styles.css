@@ -66,7 +66,11 @@ footer {
 }
 
 .current-weather-icon {
-  font-size: 150px;
+  width: 110%;
+  margin: 0 auto;
+  position: relative;
+  left: -50px;
+  bottom: -20px;
 }
 
 .current-temperature {
