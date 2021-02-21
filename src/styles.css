@@ -91,6 +91,11 @@ footer {
   width: 420px;
 }
 
+.forcast-weather-icon {
+  width: 110%;
+  margin: 0 auto;
+}
+
 .fas {
   color: #bbbfca;
 }
