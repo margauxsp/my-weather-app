@@ -23,115 +23,119 @@
     <title>Weather App</title>
   </head>
   <body>
-    <div class="container">
-      <form id="search-form">
-        <input
-          type="text"
-          placeholder="Enter your city"
-          autofocus="on"
-          autocomplete="off"
-          id="city-input"
-        />
-        <input type="submit" value="🔍" id="submit-input" />
-        <input type="button" value="📍" id="geolocation" />
-      </form>
-      <h1 id="city"></h1>
-      <h2 id="date"></h2>
-      <div class="current-weather">
-        <div class="row">
-          <div class="col-6">
-            <div>
-              <img
-                src="src/gif/partsunnygif.gif"
-                alt="weather icon"
-                class="current-weather-icon"
-              />
+    <div class="weather-app-wrapper">
+      <div class="container">
+        <form id="search-form">
+          <input
+            type="text"
+            placeholder="Enter your city"
+            autofocus="on"
+            autocomplete="off"
+            id="city-input"
+          />
+          <input type="submit" value="🔍" id="submit-input" />
+          <input type="button" value="📍" id="geolocation" />
+        </form>
+        <h1 id="city"></h1>
+        <h2 id="date"></h2>
+        <div class="current-weather">
+          <div class="row">
+            <div class="col-6">
+              <div>
+                <img
+                  src="src/gif/partsunnygif.gif"
+                  alt="partially sunny"
+                  class="current-weather-icon"
+                />
+              </div>
             </div>
-          </div>
-          <div class="col-6">
-            <ul>
-              <li>
-                <span class="current-temperature" id="temperature"></span>
-                <span class="temperature-format">
-                  <a href="#" id="celsius">°C </a>
-                  |
-                  <a href="#" id="fahrenheit">°F</a>
-                </span>
-              </li>
-              <li class="weather-type" id="weather-type"></li>
-              <li>humidity <span id="humidity"></span>%</li>
-              <li>wind <span id="wind"></span> km/h</li>
-            </ul>
+            <div class="col-6">
+              <div class="description">
+                <ul>
+                  <li>
+                    <span class="current-temperature" id="temperature"></span>
+                    <span class="temperature-format">
+                      <a href="#" id="celsius">°C </a>
+                      |
+                      <a href="#" id="fahrenheit">°F</a>
+                    </span>
+                  </li>
+                  <li class="weather-type" id="weather-type"></li>
+                  <li>humidity <span id="humidity"></span>%</li>
+                  <li>wind <span id="wind"></span> km/h</li>
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="forcast">
-        <div class="row">
-          <div class="col-2">
-            <strong>Mon</strong>
-            <div>
-              <img
-                src="src/gif/rainygif.gif"
-                alt="weather icon"
-                class="forcast-weather-icon"
-              />
+        <div class="forcast">
+          <div class="row">
+            <div class="col-2">
+              <strong>Mon</strong>
+              <div>
+                <img
+                  src="src/gif/rainygif.gif"
+                  alt="weather icon"
+                  class="forcast-weather-icon"
+                />
+              </div>
+              8°C
             </div>
-            8°C
-          </div>
-          <div class="col-2">
-            <strong>Tue</strong>
-            <div>
-              <img
-                src="src/gif/cloudygif.gif"
-                alt="weather icon"
-                class="forcast-weather-icon"
-              />
+            <div class="col-2">
+              <strong>Tue</strong>
+              <div>
+                <img
+                  src="src/gif/cloudygif.gif"
+                  alt="weather icon"
+                  class="forcast-weather-icon"
+                />
+              </div>
+              8°C
             </div>
-            8°C
-          </div>
-          <div class="col-2">
-            <strong>Wed</strong>
-            <div>
-              <img
-                src="src/gif/partsunnygif.gif"
-                alt="weather icon"
-                class="forcast-weather-icon"
-              />
+            <div class="col-2">
+              <strong>Wed</strong>
+              <div>
+                <img
+                  src="src/gif/partsunnygif.gif"
+                  alt="weather icon"
+                  class="forcast-weather-icon"
+                />
+              </div>
+              8°C
             </div>
-            8°C
-          </div>
-          <div class="col-2">
-            <strong>Thu</strong>
-            <div>
-              <img
-                src="src/gif/sunnygif.gif"
-                alt="weather icon"
-                class="forcast-weather-icon"
-              />
+            <div class="col-2">
+              <strong>Thu</strong>
+              <div>
+                <img
+                  src="src/gif/sunnygif.gif"
+                  alt="weather icon"
+                  class="forcast-weather-icon"
+                />
+              </div>
+              8°C
             </div>
-            8°C
-          </div>
-          <div class="col-2">
-            <strong>Fri</strong>
-            <div>
-              <img
-                src="src/gif/rainygif.gif"
-                alt="weather icon"
-                class="forcast-weather-icon"
-              />
+            <div class="col-2">
+              <strong>Fri</strong>
+              <div>
+                <img
+                  src="src/gif/rainygif.gif"
+                  alt="weather icon"
+                  class="forcast-weather-icon"
+                />
+              </div>
+              8°C
             </div>
-            8°C
-          </div>
-          <div class="col-2">
-            <strong>Sat</strong>
-            <div>
-              <img
-                src="src/gif/rainygif.gif"
-                alt="weather icon"
-                class="forcast-weather-icon"
-              />
+            <div class="col-2">
+              <strong>Sat</strong>
+              <div>
+                <img
+                  src="src/gif/rainygif.gif"
+                  alt="weather icon"
+                  class="forcast-weather-icon"
+                />
+              </div>
+              8°C
             </div>
-            8°C
           </div>
         </div>
       </div>
