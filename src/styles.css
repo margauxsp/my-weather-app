@@ -39,6 +39,7 @@ li {
   margin: 0 auto;
   display: block;
   list-style: none;
+  text-transform: capitalize;
 }
 
 footer {
