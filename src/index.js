@@ -1,6 +1,16 @@
 // Date and hour
+function formatDate(timestamp) {
+  let date = new Date(timestamp);
+  let hours = date.getHours();
+  if (hours < 10) {
+    hours = `0${hours}`;
+  }
 
-function formatDate(now) {
+  let minutes = date.getMinutes();
+  if (minutes < 10) {
+    minutes = `0${minutes}`;
+  }
+
   let days = [
     "Sunday",
     "Monday",
@@ -10,38 +20,10 @@ function formatDate(now) {
     "Friday",
     "Saturday",
   ];
-  let day = days[now.getDay()];
-  let date = now.getDate();
-  let months = [
-    "January",
-    "February",
-    "March",
-    "April",
-    "May",
-    "June",
-    "July",
-    "August",
-    "September",
-    "October",
-    "November",
-    "December",
-  ];
-  let month = months[now.getMonth()];
-  let hours = now.getHours();
-  if (hours < 10) {
-    hours = `0${hours}`;
-  }
-  let minutes = now.getMinutes();
-  if (minutes < 10) {
-    minutes = `0${minutes}`;
-  }
-  return `${day} | ${date} ${month} | ${hours}:${minutes}`;
+
+  let day = days[date.getDay()];
+  return `${day} ${hours}:${minutes}`;
 }
-
-let h2 = document.querySelector("#date");
-let now = new Date();
-
-h2.innerHTML = formatDate(now);
 
 // Name of the city and current temperature
 
@@ -56,6 +38,9 @@ function showWeather(response) {
   );
   document.querySelector("#weather-type").innerHTML =
     response.data.weather[0].description;
+  document.querySelector("#date").innerHTML = formatDate(
+    response.data.dt * 1000
+  );
 }
 
 function searchCity(city) {

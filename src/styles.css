@@ -39,6 +39,9 @@ li {
   margin: 0 auto;
   display: block;
   list-style: none;
+}
+
+li:first-letter {
   text-transform: capitalize;
 }
 
