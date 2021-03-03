@@ -25,6 +25,44 @@ function formatDate(timestamp) {
   return `${day} ${hours}:${minutes}`;
 }
 
+// Icon
+
+function getIcon(icon) {
+  let iconElement = "";
+  if (icon === "03d" || icon === "03n") {
+    iconElement = "src/gif/cloudygif.gif";
+  } else if (icon === "04d") {
+    iconElement = "src/gif/cloudygif.gif";
+  } else if (icon === "04n") {
+    iconElement = "src/gif/cloudygif.gif";
+  } else if (icon === "01d") {
+    iconElement = "src/gif/sunnygif.gif";
+  } else if (icon === "01n") {
+    iconElement = "src/gif/sunnygif.gif";
+  } else if (icon === "02d") {
+    iconElement = "src/gif/partsunnygif.gif";
+  } else if (icon === "02n") {
+    iconElement = "src/gif/partsunnygif.gif";
+  } else if (icon === "09d") {
+    iconElement = "src/gif/rainygif.gif";
+  } else if (icon === "09n") {
+    iconElement = "src/gif/rainygif.gif";
+  } else if (icon === "10d") {
+    iconElement = "src/gif/rainygif.gif";
+  } else if (icon === "10n") {
+    iconElement = "src/gif/rainygif.gif";
+  } else if (icon === "13d") {
+    iconElement = "far fa-snowflake";
+  } else if (icon === "13n") {
+    iconElement = "far fa-snowflake";
+  } else if (icon === "50d") {
+    iconElement = "fas fa-stream";
+  } else if (icon === "50n") {
+    iconElement = "fas fa-stream";
+  }
+  return iconElement;
+}
+
 // Name of the city and current temperature
 
 function showWeather(response) {
@@ -41,6 +79,9 @@ function showWeather(response) {
   document.querySelector("#date").innerHTML = formatDate(
     response.data.dt * 1000
   );
+  document
+    .querySelector("#main-icon")
+    .setAttribute("src", getIcon(response.data.weather[0].icon));
 }
 
 function searchCity(city) {
