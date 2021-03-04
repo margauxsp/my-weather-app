@@ -36,11 +36,11 @@ function getIcon(icon) {
   } else if (icon === "04n") {
     iconElement = "src/gif/cloudygif.gif";
   } else if (icon === "01d") {
-    iconElement = "src/gif/sunnygif.gif";
+    iconElement = "src/gif/clearnightgif.gif";
   } else if (icon === "01n") {
     iconElement = "src/gif/sunnygif.gif";
   } else if (icon === "02d") {
-    iconElement = "src/gif/partsunnygif.gif";
+    iconElement = "src/gif/partsunnyngif.gif";
   } else if (icon === "02n") {
     iconElement = "src/gif/partsunnygif.gif";
   } else if (icon === "09d") {
@@ -52,13 +52,13 @@ function getIcon(icon) {
   } else if (icon === "10n") {
     iconElement = "src/gif/rainygif.gif";
   } else if (icon === "13d") {
-    iconElement = "far fa-snowflake";
+    iconElement = "src/gif/snowgif.gif";
   } else if (icon === "13n") {
-    iconElement = "far fa-snowflake";
+    iconElement = "src/gif/snowgif.gif";
   } else if (icon === "50d") {
-    iconElement = "fas fa-stream";
+    iconElement = "src/gif/mistgif.gif";
   } else if (icon === "50n") {
-    iconElement = "fas fa-stream";
+    iconElement = "src/gif/mistgif.gif";
   }
   return iconElement;
 }
