@@ -36,9 +36,9 @@ function getIcon(icon) {
   } else if (icon === "04n") {
     iconElement = "src/gif/cloudygif.gif";
   } else if (icon === "01d") {
-    iconElement = "src/gif/clearnightgif.gif";
-  } else if (icon === "01n") {
     iconElement = "src/gif/sunnygif.gif";
+  } else if (icon === "01n") {
+    iconElement = "src/gif/clearnightgif.gif";
   } else if (icon === "02d") {
     iconElement = "src/gif/partsunnygif.gif";
   } else if (icon === "02n") {
