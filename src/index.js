@@ -1,15 +1,6 @@
 // Date and hour
 function formatDate(timestamp) {
   let date = new Date(timestamp);
-  let hours = date.getHours();
-  if (hours < 10) {
-    hours = `0${hours}`;
-  }
-
-  let minutes = date.getMinutes();
-  if (minutes < 10) {
-    minutes = `0${minutes}`;
-  }
 
   let days = [
     "Sunday",
@@ -22,7 +13,22 @@ function formatDate(timestamp) {
   ];
 
   let day = days[date.getDay()];
-  return `${day} ${hours}:${minutes}`;
+  return `${day} ${formatHours(timestamp)}`;
+}
+
+function formatHours(timestamp) {
+  let date = new Date(timestamp);
+  let hours = date.getHours();
+  if (hours < 10) {
+    hours = `0${hours}`;
+  }
+
+  let minutes = date.getMinutes();
+  if (minutes < 10) {
+    minutes = `0${minutes}`;
+  }
+
+  return `${hours}:${minutes}`;
 }
 
 // Icon
@@ -86,12 +92,45 @@ function showWeather(response) {
   celsiusTemperature = response.data.main.temp;
 }
 
+// Forcast
+
+function showForcast(response) {
+  let forcastElement = document.querySelector("#forcast");
+  forcastElement.innerHTML = null;
+  let forcast = null;
+  console.log(forcast);
+
+  for (let index = 0; index < 6; index++) {
+    let forcast = response.data.list[index];
+    forcastElement.innerHTML += ` 
+    <div class="col-3">
+    <div>
+              <h3>
+                ${formatHours(forcast.dt * 1000)}
+              </h3>
+              <img
+                src="${getIcon(forcast.weather[0].icon)}"
+                alt="weather icon"
+                class="forcast-weather-icon"
+              />
+              <div class="weather-forcast-temperature">
+                <strong>${Math.round(
+                  forcast.main.temp_max
+                )}°</strong> ${Math.round(forcast.main.temp_min)}°
+              </div>
+              </div>
+            </div>`;
+  }
+}
+
 function searchCity(city) {
   let apiKey = "c3c7aaea6607402edf670632e4d85131";
   let units = "metric";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${units}`;
-
   axios.get(apiUrl).then(showWeather);
+
+  apiUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(showForcast);
 }
 
 function handleSubmit(event) {
