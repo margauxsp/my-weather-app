@@ -103,8 +103,7 @@ function showForcast(response) {
   for (let index = 0; index < 6; index++) {
     let forcast = response.data.list[index];
     forcastElement.innerHTML += ` 
-    <div class="col-3">
-    <div>
+    <div class="col-2">
               <h3>
                 ${formatHours(forcast.dt * 1000)}
               </h3>
@@ -117,7 +116,6 @@ function showForcast(response) {
                 <strong>${Math.round(
                   forcast.main.temp_max
                 )}°</strong> ${Math.round(forcast.main.temp_min)}°
-              </div>
               </div>
             </div>`;
   }
