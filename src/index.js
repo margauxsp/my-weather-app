@@ -82,6 +82,8 @@ function showWeather(response) {
   document
     .querySelector("#main-icon")
     .setAttribute("src", getIcon(response.data.weather[0].icon));
+
+  celsiusTemperature = response.data.main.temp;
 }
 
 function searchCity(city) {
@@ -122,21 +124,29 @@ function getPosition(event) {
 let geolocationButton = document.querySelector("#geolocation");
 geolocationButton.addEventListener("click", getPosition);
 
-// Celsius fahrenheit
-
-function showCelsius(event) {
-  event.preventDefault();
-  let temperature = document.querySelector("#temperature");
-  temperature.innerHTML = 8;
-}
-let celsiusButton = document.querySelector("#celsius");
-celsiusButton.addEventListener("click", showCelsius);
+// Celsius Fahrenheit
 
 function showFahrenheit(event) {
   event.preventDefault();
-  let temperature = document.querySelector("#temperature");
-  temperature.innerHTML = 48;
+  let temperatureElement = document.querySelector("#temperature");
+  celsius.classList.remove("active");
+  fahrenheit.classList.add("active");
+  let fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
+  temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
 }
+
+function showCelsius(event) {
+  event.preventDefault();
+  let temperatureElement = document.querySelector("#temperature");
+  celsius.classList.add("active");
+  fahrenheit.classList.remove("active");
+  temperatureElement.innerHTML = Math.round(celsiusTemperature);
+}
+
+let celsiusTemperature = null;
 
 let fahrenheitButton = document.querySelector("#fahrenheit");
 fahrenheitButton.addEventListener("click", showFahrenheit);
+
+let celsiusButton = document.querySelector("#celsius");
+celsiusButton.addEventListener("click", showCelsius);

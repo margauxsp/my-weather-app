@@ -45,6 +45,10 @@ li:first-letter {
   text-transform: capitalize;
 }
 
+a:link {
+  text-decoration: none;
+}
+
 footer {
   font-size: 10px;
   text-align: center;
@@ -84,10 +88,19 @@ footer {
   right: 10px;
 }
 
-.temperature-format {
+.temperature-unit {
   position: relative;
   top: -38px;
   right: 10px;
+}
+
+.description .active {
+  color: #393e46;
+  cursor: default;
+}
+
+.description .active:hover {
+  text-decoration: none;
 }
 
 .forcast {
