@@ -98,10 +98,9 @@ function showForcast(response) {
   let forcastElement = document.querySelector("#forcast");
   forcastElement.innerHTML = null;
   let forcast = null;
-  console.log(forcast);
 
   for (let index = 0; index < 6; index++) {
-    let forcast = response.data.list[index];
+    forcast = response.data.list[index];
     forcastElement.innerHTML += ` 
     <div class="col-2">
               <h3>
@@ -117,7 +116,8 @@ function showForcast(response) {
                   forcast.main.temp_max
                 )}°</strong> ${Math.round(forcast.main.temp_min)}°
               </div>
-            </div>`;
+            </div>
+            `;
   }
 }
 
