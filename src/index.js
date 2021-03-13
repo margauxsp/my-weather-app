@@ -98,29 +98,29 @@ function showWeather(response) {
   celsiusTemperature = response.data.main.temp;
 }
 
-// Forcast
+// Forecast
 
-function showForcast(response) {
-  let forcastElement = document.querySelector("#forcast");
-  forcastElement.innerHTML = null;
-  let forcast = null;
+function showForecast(response) {
+  let forecastElement = document.querySelector("#forecast");
+  forecastElement.innerHTML = null;
+  let forecast = null;
 
   for (let index = 0; index < 6; index++) {
-    forcast = response.data.list[index];
-    forcastElement.innerHTML += ` 
+    forecast = response.data.list[index];
+    forecastElement.innerHTML += ` 
     <div class="col-2">
               <h3>
-                ${formatDay(forcast.dt * 1000)}
+                ${formatDay(forecast.dt * 1000)}
               </h3>
               <img
-                src="${getIcon(forcast.weather[0].icon)}"
+                src="${getIcon(forecast.weather[0].icon)}"
                 alt="weather icon"
-                class="forcast-weather-icon"
+                class="forecast-weather-icon"
               />
-              <div class="weather-forcast-temperature">
+              <div class="weather-forecast-temperature">
                 <strong>${Math.round(
-                  forcast.main.temp_max
-                )}°</strong> ${Math.round(forcast.main.temp_min)}°
+                  forecast.main.temp_max
+                )}°</strong> ${Math.round(forecast.main.temp_min)}°
               </div>
             </div>
             `;
@@ -134,7 +134,7 @@ function searchCity(city) {
   axios.get(apiUrl).then(showWeather);
 
   apiUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}&units=metric`;
-  axios.get(apiUrl).then(showForcast);
+  axios.get(apiUrl).then(showForecast);
 }
 
 function handleSubmit(event) {

@@ -103,7 +103,7 @@ footer {
   text-decoration: none;
 }
 
-.forcast {
+.forecast {
   margin: 0 auto;
   padding: 0;
   font-size: 20px;
@@ -111,7 +111,7 @@ footer {
   width: 380px;
 }
 
-.forcast-weather-icon {
+.forecast-weather-icon {
   width: 110%;
   margin: 0 auto;
 }
