@@ -31,6 +31,12 @@ function formatHours(timestamp) {
   return `${hours}:${minutes}`;
 }
 
+function formatDay(timestamp) {
+  let time = new Date(timestamp);
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+  return days[time.getDay()];
+}
+
 // Icon
 
 function getIcon(icon) {
@@ -104,7 +110,7 @@ function showForcast(response) {
     forcastElement.innerHTML += ` 
     <div class="col-2">
               <h3>
-                ${formatHours(forcast.dt * 1000)}
+                ${formatDay(forcast.dt * 1000)}
               </h3>
               <img
                 src="${getIcon(forcast.weather[0].icon)}"
