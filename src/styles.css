@@ -4,16 +4,20 @@ body {
 }
 
 form {
-  display: block;
-  margin: 0 0 10px;
+  margin: 0 0 15px;
   text-align: center;
 }
 
 input {
   padding: 5px 15px;
-  border: 1px #ebedee;
   cursor: pointer;
   border-radius: 5px;
+  text-align: center;
+  border: 15px;
+}
+
+h1,
+h2 {
   text-align: center;
 }
 
@@ -36,7 +40,6 @@ ul {
 li {
   font-size: 18px;
   font-weight: bold;
-  margin: 0 auto;
   display: block;
   list-style: none;
 }
@@ -56,7 +59,7 @@ footer {
 }
 
 .weather-app-wrapper {
-  max-width: 430px;
+  max-width: 440px;
   margin: 30px auto;
 }
 
@@ -64,34 +67,27 @@ footer {
   border: 1px solid #ebedee;
   border-radius: 15px;
   box-shadow: 5px 5px 10px grey;
-  padding: 30px;
-  display: block;
-}
-
-.current-weather {
-  position: relative;
-  right: -40px;
+  padding: 25px;
 }
 
 .current-weather-icon {
-  width: 110%;
-  margin: 0 auto;
+  width: 130%;
   position: relative;
-  left: -50px;
-  bottom: -15px;
+  left: -25px;
+  bottom: -4px;
 }
 
 .current-temperature {
   font-size: 70px;
   line-height: 1;
   position: relative;
-  right: 10px;
+  right: 5px;
 }
 
 .temperature-unit {
   position: relative;
   top: -38px;
-  right: 10px;
+  right: 5px;
 }
 
 .description .active {
@@ -104,14 +100,10 @@ footer {
 }
 
 .forecast {
-  margin: 0 auto;
-  padding: 0;
-  font-size: 20px;
-  text-align: center;
-  width: 380px;
+  font-size: 22px;
 }
 
 .forecast-weather-icon {
-  width: 110%;
-  margin: 0 auto;
+  width: 150%;
+  text-align: center;
 }
