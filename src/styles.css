@@ -70,6 +70,10 @@ footer {
   padding: 25px;
 }
 
+.city-input {
+  width: 50%;
+}
+
 .current-weather-icon {
   width: 130%;
   position: relative;
