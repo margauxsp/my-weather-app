@@ -13,7 +13,7 @@ input {
   cursor: pointer;
   border-radius: 5px;
   text-align: center;
-  border: 15px;
+  border: 1px solid #393e46;
 }
 
 h1,
@@ -59,7 +59,7 @@ footer {
 }
 
 .weather-app-wrapper {
-  max-width: 440px;
+  max-width: 420px;
   margin: 30px auto;
 }
 
@@ -86,8 +86,9 @@ footer {
 
 .temperature-unit {
   position: relative;
-  top: -38px;
-  right: 5px;
+  top: -40px;
+  right: 12px;
+  font-size: 15px;
 }
 
 .description .active {
@@ -106,5 +107,5 @@ footer {
 .forecast-weather-icon {
   width: 150%;
   position: relative;
-  right: 15px;
+  right: 12px;
 }
