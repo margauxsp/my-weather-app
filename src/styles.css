@@ -82,7 +82,7 @@ footer {
 }
 
 .current-temperature {
-  font-size: 70px;
+  font-size: 65px;
   line-height: 1;
   position: relative;
   right: 5px;
@@ -90,7 +90,7 @@ footer {
 
 .temperature-unit {
   position: relative;
-  top: -40px;
+  top: -38px;
   right: 8px;
   font-size: 13px;
 }
