@@ -38,7 +38,7 @@ ul {
 }
 
 li {
-  font-size: 18px;
+  font-size: 17px;
   font-weight: bold;
   display: block;
   list-style: none;
@@ -87,8 +87,8 @@ footer {
 .temperature-unit {
   position: relative;
   top: -40px;
-  right: 12px;
-  font-size: 15px;
+  right: 8px;
+  font-size: 13px;
 }
 
 .description .active {
