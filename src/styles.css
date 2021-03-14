@@ -91,8 +91,8 @@ footer {
 .temperature-unit {
   position: relative;
   top: -38px;
-  right: 8px;
-  font-size: 13px;
+  right: 6px;
+  font-size: 10px;
 }
 
 .description .active {
