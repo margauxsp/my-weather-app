@@ -105,5 +105,6 @@ footer {
 
 .forecast-weather-icon {
   width: 150%;
-  text-align: center;
+  position: relative;
+  right: 15px;
 }
